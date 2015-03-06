@@ -1,6 +1,6 @@
 default["statsd"]["dir"]                          = "/usr/share/statsd"
 default["statsd"]["conf_dir"]                     = "/etc/statsd"
-default["statsd"]["repository"]                   = "https://github.com/etsy/statsd.git"
+default["statsd"]["repository"]                   = "https://github.com/Mindera/statsd.git"
 default["statsd"]["reference"]                    = "master"
 default["statsd"]["flush_interval"]               = 10000
 default["statsd"]["percent_threshold"]            = 90
@@ -17,6 +17,7 @@ default["statsd"]["delete_sets"]                  = false
 default["statsd"]["delete_counters"]              = false
 default["statsd"]["username"]                     = "statsd"
 default["statsd"]["dump_messages"]                = false
+default["statsd"]["whitelist_flush"]              = '["count", "count_ps", "mean", "upper", "lower"]'
 
 # Graphite storage config
 default["statsd"]["graphite"]["legacy_namespace"] = true
