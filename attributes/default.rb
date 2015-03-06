@@ -17,7 +17,7 @@ default["statsd"]["delete_sets"]                  = false
 default["statsd"]["delete_counters"]              = false
 default["statsd"]["username"]                     = "statsd"
 default["statsd"]["dump_messages"]                = false
-default["statsd"]["whitelist_flush"]              = '["count", "count_ps", "mean", "upper", "lower"]'
+default["statsd"]["whitelist_flush"]              = %w{ count count_ps mean upper lower }
 
 # Graphite storage config
 default["statsd"]["graphite"]["legacy_namespace"] = true
