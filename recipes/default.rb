@@ -29,6 +29,8 @@ template "#{node["statsd"]["conf_dir"]}/config.js" do
   variables(
     :address            => node["statsd"]["address"],
     :port               => node["statsd"]["port"],
+    :mgmt_address       => node["statsd"]["mgmt_address"],
+    :mgmt_port          => node["statsd"]["mgmt_port"],
     :flush_interval     => node["statsd"]["flush_interval"],
     :percent_threshold  => node["statsd"]["percent_threshold"],
     :graphite_port      => node["statsd"]["graphite_port"],
@@ -46,6 +48,7 @@ template "#{node["statsd"]["conf_dir"]}/config.js" do
     :prefix_gauge       => node["statsd"]["graphite"]["prefix_gauge"],
     :prefix_set         => node["statsd"]["graphite"]["prefix_set"],
     :whitelist_flush    => node["statsd"]["whitelist_flush"],
+    :debug              => node["statsd"]["debug"],
     :dump_messages      => node["statsd"]["dump_messages"]
   )
   notifies :restart, "service[statsd]", :delayed

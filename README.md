@@ -30,6 +30,8 @@ Installs and configures StatsD.
 * `node["statsd"]["percent_threshold"]` - Nth percentile value(s). Single value or array.
 * `node["statsd"]["address"]` - Address to bind StatsD to.
 * `node["statsd"]["port"]` - Port to run StatsD on.
+* `node["statsd"]["mgmt_address"]` - Address to bind the admin interface to.
+* `node["statsd"]["mgmt_port"]` - Port to run the admin interface on.
 * `node["statsd"]["graphite_host"]` - Graphite host.
 * `node["statsd"]["graphite_port"]` - Graphite port.
 * `node["statsd"]["graphite_role"]` - Graphite role for automatic discovery.
@@ -45,7 +47,9 @@ Installs and configures StatsD.
 * `node["statsd"]["delete_counters"]` - Don't send values to graphite for
   inactive counters (default: `false`).
 * `node["statsd"]["username"]` - Will be used for process supervision
-  (default: `stasd`).
+  (default: `statsd`).
+* `node["statsd"]["debug"]` - Log exceptions and print out more diagnostic
+  info (default: `false`).
 * `node["statsd"]["dump_messages"]` - Print debugging information on incoming
   messages (default: `false`).
 * `node["statsd"]["graphite"]["legacy_namespace"]` - Flag to use legacy
